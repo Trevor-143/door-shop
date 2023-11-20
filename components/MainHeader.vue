@@ -68,5 +68,17 @@ const userId = useCookie('userId', { sameSite: 'lax' })
     display: flex;
     align-items: center;
 }
+.bigNav a {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 1rem;
+}
+.bigNav a:last-child {
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 2rem;
+}
 
 </style>
