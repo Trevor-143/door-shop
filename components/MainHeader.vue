@@ -61,7 +61,7 @@ const userId = useCookie('userId', { sameSite: 'lax' })
     position: absolute;
     bottom: 1rem;
     right: -2.5rem;
-    color: orange;
+    color: var(--themeColor);
 }
 
 .bigNav {
@@ -75,10 +75,10 @@ const userId = useCookie('userId', { sameSite: 'lax' })
 }
 .bigNav a:last-child {
     padding: 0.5rem 1rem;
-    background-color: orange;
+    background-color: var(--themeColor);
     color: #ffffff;
-    font-weight: 600;
-    border-radius: 2rem;
+    font-weight: 800;
+    border-radius: var(--radius);
 }
 
 </style>

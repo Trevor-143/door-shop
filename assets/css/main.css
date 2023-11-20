@@ -6,3 +6,8 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
+
+:root {
+    --themeColor: orange;
+    --radius: 0.7rem;
+}
