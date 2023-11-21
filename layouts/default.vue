@@ -12,7 +12,7 @@
 <style scoped>
 
 .allContent {
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 1rem 0.5rem;
     margin: auto;
 }

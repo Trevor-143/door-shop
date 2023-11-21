@@ -9,5 +9,6 @@
 
 :root {
     --themeColor: orange;
+    --softTheme: rgb(255, 240, 212);
     --radius: 0.7rem;
 }
