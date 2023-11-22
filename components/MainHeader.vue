@@ -1,15 +1,12 @@
 <template>
     <div class="mainHeader">
         <div class="headerContent" >
-            <div class="logo">
+            <div @click="goHome" class="logo" style="cursor: pointer;" >
                 <img src="/door-lock-icon.png" alt="logo" >
                 <span>Shop</span>
             </div>
             <div class="bigNav" >
-                <nuxt-link to="#" >electronics</nuxt-link>
-                <nuxt-link to="#" >jewelery</nuxt-link>
-                <nuxt-link to="#" >men's clothing</nuxt-link>
-                <nuxt-link to="#" >women's clothing</nuxt-link>
+                <nuxt-link v-for="(cat, index) in category" :key="index" :to="`/products/${cat}`" >{{ cat }}</nuxt-link>
                 <div class="userActions">
                     <div v-if="!isUser" class="userOut">
                         <nuxt-link to="#" >sign up</nuxt-link>
@@ -37,6 +34,17 @@ const isUser = ref(false)
 const userImage = useCookie('userImage', { sameSite: 'lax' })
 const userName = useCookie('userName', { sameSite: 'lax' })
 const userId = useCookie('userId', { sameSite: 'lax' })
+
+const category = ref([])
+
+const { data } = await useFetch('/api/getCategories')
+category.value = data.value.allCategories
+console.log(category.value)
+
+const router = useRouter()
+const goHome = () => {
+    router.push('/')
+}
 
 </script>
 

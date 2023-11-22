@@ -17,6 +17,7 @@
 
 const { data } = await useFetch('/api/getAllProducts')
 const featuredProduct = data.value.randomProduct
+console.log(data.value)
 
 
 </script>
