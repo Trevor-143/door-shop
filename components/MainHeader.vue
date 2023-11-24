@@ -9,8 +9,8 @@
                 <nuxt-link v-for="(cat, index) in category" :key="index" :to="`/products/${cat}`" >{{ cat }}</nuxt-link>
                 <div class="userActions">
                     <div v-if="!isUser" class="userOut">
-                        <nuxt-link to="#" >sign up</nuxt-link>
-                        <nuxt-link to="#" >log in</nuxt-link>
+                        <nuxt-link to="/signup" >sign up</nuxt-link>
+                        <nuxt-link to="/signin" >log in</nuxt-link>
                     </div>
                     <div v-if="isUser" class="userIn">
                         <img v-if="userImage" :src=userImage alt="no user image" />
